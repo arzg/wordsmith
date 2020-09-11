@@ -43,15 +43,10 @@ impl Theme {
     fn path(&self) -> PathBuf {
         PathBuf::from(format!("themes/Wordsmith-{}-color-theme.json", self.name))
     }
-}
 
-impl fmt::Display for Theme {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        writeln!(f, "{{")?;
-
-        writeln!(f, "\"name\": \"Wordsmith {}\",", self.name)?;
-
+    fn workbench_colors(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         writeln!(f, "\"colors\": {{")?;
+
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.foreground", self.foreground)?;
         write_scope(f, "foreground", self.foreground)?;
@@ -105,7 +100,19 @@ impl fmt::Display for Theme {
         write_scope(f, "editorLink.activeForeground", self.teal)?;
 
         write_scope(f, "rust_analyzer.inlayHints.foreground", self.out_of_focus)?;
-        writeln!(f, "}}")?;
+
+        writeln!(f, "}},")?;
+
+        Ok(())
+    }
+}
+
+impl fmt::Display for Theme {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        writeln!(f, "{{")?;
+
+        writeln!(f, "\"name\": \"Wordsmith {}\",", self.name)?;
+        self.workbench_colors(f)?;
 
         writeln!(f, "}}")?;
 
