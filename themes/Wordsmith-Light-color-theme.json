@@ -21,6 +21,8 @@
 "statusBar.debuggingBackground": "#F7F7F7",
 "statusBar.noFolderBackground": "#F7F7F7",
 "statusBar.border": "#DBDBDB",
+"panel.background": "#FCFCFC",
+"panel.border": "#DBDBDB",
 "tab.activeBackground": "#FCFCFC",
 "tab.border": "#DBDBDB",
 "tab.inactiveBackground": "#F7F7F7",

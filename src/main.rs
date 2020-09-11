@@ -68,6 +68,9 @@ impl fmt::Display for Theme {
         write_scope(f, "statusBar.noFolderBackground", self.background)?;
         write_scope(f, "statusBar.border", self.borders)?;
 
+        write_scope(f, "panel.background", self.ui_background)?;
+        write_scope(f, "panel.border", self.borders)?;
+
         write_scope(f, "tab.activeBackground", self.ui_background)?;
         write_scope(f, "tab.border", self.borders)?;
         write_scope(f, "tab.inactiveBackground", self.background)?;
