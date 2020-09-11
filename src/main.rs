@@ -46,6 +46,9 @@ impl fmt::Display for Theme {
         write_scope(f, "editor.foreground", self.foreground)?;
         write_scope(f, "foreground", self.foreground)?;
 
+        write_scope(f, "editorLineNumber.foreground", self.out_of_focus)?;
+        write_scope(f, "editorLineNumber.activeForeground", self.foreground)?;
+
         write_scope(f, "sideBar.background", self.ui_background)?;
         write_scope(f, "sideBar.border", self.borders)?;
 
