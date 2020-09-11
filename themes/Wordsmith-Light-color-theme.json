@@ -5,6 +5,7 @@
 "editor.foreground": "#1A1A1A",
 "foreground": "#1A1A1A",
 "sideBar.background": "#FCFCFC",
+"sideBar.border": "#DBDBDB",
 "statusBar.foreground": "#1A1A1A",
 "statusBar.background": "#F7F7F7",
 "statusBar.debuggingBackground": "#F7F7F7",
