@@ -8,6 +8,7 @@ fn main() -> io::Result<()> {
 const LIGHT: Theme = Theme {
     name: "Light",
     background: Rgb(0xF7F7F7),
+    ui_background: Rgb(0xFCFCFC),
     foreground: Rgb(0x1A1A1A),
     borders: Rgb(0xDBDBDB),
     cursor: Rgb(0x16BDEC),
@@ -18,6 +19,7 @@ const LIGHT: Theme = Theme {
 struct Theme {
     name: &'static str,
     background: Rgb,
+    ui_background: Rgb,
     foreground: Rgb,
     borders: Rgb,
     cursor: Rgb,
@@ -41,6 +43,8 @@ impl fmt::Display for Theme {
         write_scope(f, "editor.background", self.background)?;
         write_scope(f, "editor.foreground", self.foreground)?;
         write_scope(f, "foreground", self.foreground)?;
+
+        write_scope(f, "sideBar.background", self.ui_background)?;
 
         write_scope(f, "statusBar.foreground", self.foreground)?;
         write_scope(f, "statusBar.background", self.background)?;
