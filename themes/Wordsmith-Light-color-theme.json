@@ -1,6 +1,8 @@
 {
 "name": "Wordsmith Light",
 "colors": {
-"editor.background": "#F7F7F7"
+"editor.background": "#F7F7F7",
+"editor.foreground": "#1A1A1A",
+"foreground": "#1A1A1A",
 }
 }

@@ -8,11 +8,13 @@ fn main() -> io::Result<()> {
 const LIGHT: Theme = Theme {
     name: "Light",
     background: Rgb(0xF7F7F7),
+    foreground: Rgb(0x1A1A1A),
 };
 
 struct Theme {
     name: &'static str,
     background: Rgb,
+    foreground: Rgb,
 }
 
 impl Theme {
@@ -28,7 +30,9 @@ impl fmt::Display for Theme {
         writeln!(f, "\"name\": \"Wordsmith {}\",", self.name)?;
 
         writeln!(f, "\"colors\": {{")?;
-        writeln!(f, "\"editor.background\": {}", self.background)?;
+        writeln!(f, "\"editor.background\": {},", self.background)?;
+        writeln!(f, "\"editor.foreground\": {},", self.foreground)?;
+        writeln!(f, "\"foreground\": {},", self.foreground)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
