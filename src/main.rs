@@ -49,6 +49,11 @@ impl fmt::Display for Theme {
         write_scope(f, "sideBar.background", self.ui_background)?;
         write_scope(f, "sideBar.border", self.borders)?;
 
+        write_scope(f, "activityBar.background", self.ui_background)?;
+        write_scope(f, "activityBar.foreground", self.foreground)?;
+        write_scope(f, "activityBar.inactiveForeground", self.out_of_focus)?;
+        write_scope(f, "activityBar.activeBorder", self.teal)?;
+
         write_scope(f, "statusBar.foreground", self.foreground)?;
         write_scope(f, "statusBar.background", self.background)?;
         write_scope(f, "statusBar.debuggingBackground", self.background)?;
