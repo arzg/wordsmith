@@ -11,6 +11,7 @@ const LIGHT: Theme = Theme {
     ui_background: Rgb(0xFCFCFC),
     foreground: Rgb(0x1A1A1A),
     teal: Rgb(0x16BDEC),
+    out_of_focus: Rgb(0xC7C4C2),
     borders: Rgb(0xDBDBDB),
     editor_selection: Rgb(0xBFE8F4),
     ui_selection: Rgb(0xB3D7FF),
@@ -22,6 +23,7 @@ struct Theme {
     ui_background: Rgb,
     foreground: Rgb,
     teal: Rgb,
+    out_of_focus: Rgb,
     borders: Rgb,
     editor_selection: Rgb,
     ui_selection: Rgb,
@@ -58,6 +60,8 @@ impl fmt::Display for Theme {
 
         write_scope(f, "editor.selectionBackground", self.editor_selection)?;
         write_scope(f, "selection.background", self.ui_selection)?;
+
+        write_scope(f, "rust_analyzer.inlayHints.foreground", self.out_of_focus)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
