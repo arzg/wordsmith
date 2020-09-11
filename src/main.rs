@@ -167,6 +167,19 @@ impl Theme {
         write_scope(f, "minimapGutter.modifiedBackground", self.yellow)?;
         write_scope(f, "editorOverviewRuler.modifiedForeground", self.yellow)?;
 
+        write_scope(f, "peekView.border", self.out_of_focus)?;
+        write_scope(f, "peekViewEditor.background", self.ui_background)?;
+        write_scope(f, "peekViewEditor.matchHighlightBackground", self.editor_selection)?;
+        write_scope(f, "peekViewResult.background", self.background)?;
+        write_scope(f, "peekViewResult.fileForeground", self.foreground)?;
+        write_scope(f, "peekViewResult.lineForeground", self.less_out_of_focus)?;
+        write_scope(f, "peekViewResult.matchHighlightBackground", self.editor_selection)?;
+        write_scope(f, "peekViewResult.selectionBackground", self.ui_background_focused)?;
+        write_scope(f, "peekViewResult.selectionForeground", self.foreground)?;
+        write_scope(f, "peekViewTitle.background", self.background)?;
+        write_scope(f, "peekViewTitleDescription.foreground", self.less_out_of_focus)?;
+        write_scope(f, "peekViewTitleLabel.foreground", self.foreground)?;
+
         write_scope(f, "debugIcon.breakpointForeground", self.teal)?;
         write_scope(f, "debugIcon.breakpointCurrentStackframeForeground", self.teal)?;
         write_scope(f, "editor.stackFrameHighlightBackground", self.editor_selection)?;
