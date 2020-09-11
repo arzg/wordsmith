@@ -9,6 +9,7 @@
 "statusBar.debuggingBackground": "#F7F7F7",
 "statusBar.noFolderBackground": "#F7F7F7",
 "statusBar.border": "#DBDBDB",
+"editorCursor.background": "#16BDEC",
 "editorCursor.foreground": "#16BDEC",
 }
 }

@@ -44,6 +44,7 @@ impl fmt::Display for Theme {
         writeln!(f, "\"statusBar.noFolderBackground\": {},", self.background)?;
         writeln!(f, "\"statusBar.border\": {},", self.borders)?;
 
+        writeln!(f, "\"editorCursor.background\": {},", self.cursor)?;
         writeln!(f, "\"editorCursor.foreground\": {},", self.cursor)?;
         writeln!(f, "}}")?;
 
