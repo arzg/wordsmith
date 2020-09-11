@@ -8,5 +8,6 @@
 "statusBar.background": "#F7F7F7",
 "statusBar.debuggingBackground": "#F7F7F7",
 "statusBar.noFolderBackground": "#F7F7F7",
+"statusBar.border": "#DBDBDB",
 }
 }

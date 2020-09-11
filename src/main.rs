@@ -9,12 +9,14 @@ const LIGHT: Theme = Theme {
     name: "Light",
     background: Rgb(0xF7F7F7),
     foreground: Rgb(0x1A1A1A),
+    borders: Rgb(0xDBDBDB),
 };
 
 struct Theme {
     name: &'static str,
     background: Rgb,
     foreground: Rgb,
+    borders: Rgb,
 }
 
 impl Theme {
@@ -38,6 +40,7 @@ impl fmt::Display for Theme {
         writeln!(f, "\"statusBar.background\": {},", self.background)?;
         writeln!(f, "\"statusBar.debuggingBackground\": {},", self.background)?;
         writeln!(f, "\"statusBar.noFolderBackground\": {},", self.background)?;
+        writeln!(f, "\"statusBar.border\": {},", self.borders)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
