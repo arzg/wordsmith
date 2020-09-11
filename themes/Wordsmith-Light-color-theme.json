@@ -49,6 +49,7 @@
 "titleBar.inactiveForeground": "#1A1A1A",
 "editorWidget.background": "#FCFCFC",
 "editorWidget.border": "#DBDBDB",
+"input.background": "#FFFFFF",
 "editor.hoverHighlightBackground": "#BFE8F4",
 "editor.wordHighlightBackground": "#BFE8F455",
 "editor.selectionHighlightBackground": "#BFE8F455",

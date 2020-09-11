@@ -16,6 +16,7 @@ const LIGHT: Theme = Theme {
     background: Rgb(0xF7F7F7),
     ui_background: Rgb(0xFCFCFC),
     ui_background_focused: Rgb(0xF0F0F0),
+    ui_background_input: Rgb(0xFFFFFF),
     foreground: Rgb(0x1A1A1A),
     teal: Rgb(0x16BDEC),
     yellow: Rgb(0xA66501),
@@ -35,6 +36,7 @@ const DARK: Theme = Theme {
     background: Rgb(0x1A1A1A),
     ui_background: Rgb(0x141414),
     ui_background_focused: Rgb(0x2B2B2B),
+    ui_background_input: Rgb(0x262626),
     foreground: Rgb(0xCCCCCC),
     teal: Rgb(0x16BDEC),
     yellow: Rgb(0xC1944E),
@@ -54,6 +56,7 @@ struct Theme {
     background: Rgb,
     ui_background: Rgb,
     ui_background_focused: Rgb,
+    ui_background_input: Rgb,
     foreground: Rgb,
     teal: Rgb,
     yellow: Rgb,
@@ -134,6 +137,8 @@ impl Theme {
 
         write_scope(f, "editorWidget.background", self.ui_background)?;
         write_scope(f, "editorWidget.border", self.borders)?;
+
+        write_scope(f, "input.background", self.ui_background_input)?;
 
         write_scope(f, "editor.hoverHighlightBackground", self.editor_selection)?;
         write_scope(f, "editor.wordHighlightBackground", (self.editor_selection, 0x55))?;
