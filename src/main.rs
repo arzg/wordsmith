@@ -10,8 +10,8 @@ const LIGHT: Theme = Theme {
     background: Rgb(0xF7F7F7),
     ui_background: Rgb(0xFCFCFC),
     foreground: Rgb(0x1A1A1A),
+    teal: Rgb(0x16BDEC),
     borders: Rgb(0xDBDBDB),
-    cursor: Rgb(0x16BDEC),
     editor_selection: Rgb(0xBFE8F4),
     ui_selection: Rgb(0xB3D7FF),
 };
@@ -21,8 +21,8 @@ struct Theme {
     background: Rgb,
     ui_background: Rgb,
     foreground: Rgb,
+    teal: Rgb,
     borders: Rgb,
-    cursor: Rgb,
     editor_selection: Rgb,
     ui_selection: Rgb,
 }
@@ -52,8 +52,8 @@ impl fmt::Display for Theme {
         write_scope(f, "statusBar.noFolderBackground", self.background)?;
         write_scope(f, "statusBar.border", self.borders)?;
 
-        write_scope(f, "editorCursor.background", self.cursor)?;
-        write_scope(f, "editorCursor.foreground", self.cursor)?;
+        write_scope(f, "editorCursor.background", self.teal)?;
+        write_scope(f, "editorCursor.foreground", self.teal)?;
 
         write_scope(f, "editor.selectionBackground", self.editor_selection)?;
         write_scope(f, "selection.background", self.ui_selection)?;
