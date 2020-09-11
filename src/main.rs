@@ -120,6 +120,10 @@ impl Theme {
         write_scope(f, "textLink.activeForeground", self.teal)?;
         write_scope(f, "editorLink.activeForeground", self.teal)?;
 
+        write_scope(f, "debugIcon.breakpointForeground", self.teal)?;
+        write_scope(f, "debugIcon.breakpointCurrentStackframeForeground", self.teal)?;
+        write_scope(f, "editor.stackFrameHighlightBackground", self.editor_selection)?;
+
         write_scope(f, "terminal.foreground", self.foreground)?;
         write_scope(f, "terminal.ansiBlack", self.background)?;
         write_scope(f, "terminal.ansiBrightBlack", self.out_of_focus)?;
