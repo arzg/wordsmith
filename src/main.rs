@@ -101,6 +101,10 @@ impl Theme {
         write_scope(f, "editorWidget.background", self.ui_background)?;
         write_scope(f, "editorWidget.border", self.borders)?;
 
+        write_scope(f, "editor.hoverHighlightBackground", self.editor_selection)?;
+        write_scope(f, "editor.wordHighlightBackground", (self.editor_selection, 0x55))?;
+        write_scope(f, "editor.selectionHighlightBackground", (self.editor_selection, 0x55))?;
+
         write_scope(f, "editorCursor.background", self.teal)?;
         write_scope(f, "editorCursor.foreground", self.teal)?;
 
