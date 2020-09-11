@@ -6,7 +6,7 @@
     "repository": {
         "url": "https://github.com/arzg/wordsmith"
     },
-    "version": "0.2.4",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.47.0"
     },
@@ -14,6 +14,13 @@
         "Themes"
     ],
     "contributes": {
-        "themes": []
+        "themes": [
+            {
+                "label": "Wordsmith Light",
+                "id": "Wordsmith Light",
+                "uiTheme": "vs",
+                "path": "./themes/Wordsmith-Light-color-theme.json"
+            }
+        ]
     }
 }
