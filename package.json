@@ -1,0 +1,19 @@
+{
+    "name": "wordsmith",
+    "displayName": "Wordsmith",
+    "description": "A VS Code theme based on iA Writer",
+    "publisher": "arzg",
+    "repository": {
+        "url": "https://github.com/arzg/wordsmith"
+    },
+    "version": "0.2.4",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": []
+    }
+}
