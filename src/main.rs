@@ -33,6 +33,11 @@ impl fmt::Display for Theme {
         writeln!(f, "\"editor.background\": {},", self.background)?;
         writeln!(f, "\"editor.foreground\": {},", self.foreground)?;
         writeln!(f, "\"foreground\": {},", self.foreground)?;
+
+        writeln!(f, "\"statusBar.foreground\": {},", self.foreground)?;
+        writeln!(f, "\"statusBar.background\": {},", self.background)?;
+        writeln!(f, "\"statusBar.debuggingBackground\": {},", self.background)?;
+        writeln!(f, "\"statusBar.noFolderBackground\": {},", self.background)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
