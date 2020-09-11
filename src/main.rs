@@ -55,6 +55,9 @@ impl fmt::Display for Theme {
         write_scope(f, "statusBar.noFolderBackground", self.background)?;
         write_scope(f, "statusBar.border", self.borders)?;
 
+        write_scope(f, "editorWidget.background", self.ui_background)?;
+        write_scope(f, "editorWidget.border", self.borders)?;
+
         write_scope(f, "editorCursor.background", self.teal)?;
         write_scope(f, "editorCursor.foreground", self.teal)?;
 
