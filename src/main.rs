@@ -127,6 +127,11 @@ impl Theme {
         write_scope(f, "editorGroupHeader.tabsBackground", self.background)?;
         write_scope(f, "editorGroup.border", self.borders)?;
 
+        write_scope(f, "titleBar.activeBackground", self.ui_background)?;
+        write_scope(f, "titleBar.inactiveBackground", self.ui_background)?;
+        write_scope(f, "titleBar.activeForeground", self.foreground)?;
+        write_scope(f, "titleBar.inactiveForeground", self.foreground)?;
+
         write_scope(f, "editorWidget.background", self.ui_background)?;
         write_scope(f, "editorWidget.border", self.borders)?;
 
