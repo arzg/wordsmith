@@ -150,6 +150,23 @@ impl Theme {
         write_scope(f, "textLink.activeForeground", self.teal)?;
         write_scope(f, "editorLink.activeForeground", self.teal)?;
 
+        write_scope(f, "diffEditor.insertedTextBackground", (self.green, 0x33))?;
+        write_scope(f, "editorGutter.addedBackground", self.green)?;
+        write_scope(f, "gitDecoration.addedResourceForeground", self.green)?;
+        write_scope(f, "minimapGutter.addedBackground", self.green)?;
+        write_scope(f, "editorOverviewRuler.addedForeground", self.green)?;
+
+        write_scope(f, "diffEditor.removedTextBackground", (self.red, 0x33))?;
+        write_scope(f, "editorGutter.deletedBackground", self.red)?;
+        write_scope(f, "gitDecoration.deletedResourceForeground", self.red)?;
+        write_scope(f, "minimapGutter.deletedBackground", self.red)?;
+        write_scope(f, "editorOverviewRuler.deletedForeground", self.red)?;
+
+        write_scope(f, "editorGutter.modifiedBackground", self.yellow)?;
+        write_scope(f, "gitDecoration.modifiedResourceForeground", self.yellow)?;
+        write_scope(f, "minimapGutter.modifiedBackground", self.yellow)?;
+        write_scope(f, "editorOverviewRuler.modifiedForeground", self.yellow)?;
+
         write_scope(f, "debugIcon.breakpointForeground", self.teal)?;
         write_scope(f, "debugIcon.breakpointCurrentStackframeForeground", self.teal)?;
         write_scope(f, "editor.stackFrameHighlightBackground", self.editor_selection)?;
