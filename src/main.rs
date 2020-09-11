@@ -38,21 +38,21 @@ impl fmt::Display for Theme {
         writeln!(f, "\"name\": \"Wordsmith {}\",", self.name)?;
 
         writeln!(f, "\"colors\": {{")?;
-        writeln!(f, "\"editor.background\": {},", self.background)?;
-        writeln!(f, "\"editor.foreground\": {},", self.foreground)?;
-        writeln!(f, "\"foreground\": {},", self.foreground)?;
+        write_scope(f, "editor.background", self.background)?;
+        write_scope(f, "editor.foreground", self.foreground)?;
+        write_scope(f, "foreground", self.foreground)?;
 
-        writeln!(f, "\"statusBar.foreground\": {},", self.foreground)?;
-        writeln!(f, "\"statusBar.background\": {},", self.background)?;
-        writeln!(f, "\"statusBar.debuggingBackground\": {},", self.background)?;
-        writeln!(f, "\"statusBar.noFolderBackground\": {},", self.background)?;
-        writeln!(f, "\"statusBar.border\": {},", self.borders)?;
+        write_scope(f, "statusBar.foreground", self.foreground)?;
+        write_scope(f, "statusBar.background", self.background)?;
+        write_scope(f, "statusBar.debuggingBackground", self.background)?;
+        write_scope(f, "statusBar.noFolderBackground", self.background)?;
+        write_scope(f, "statusBar.border", self.borders)?;
 
-        writeln!(f, "\"editorCursor.background\": {},", self.cursor)?;
-        writeln!(f, "\"editorCursor.foreground\": {},", self.cursor)?;
+        write_scope(f, "editorCursor.background", self.cursor)?;
+        write_scope(f, "editorCursor.foreground", self.cursor)?;
 
-        writeln!(f, "\"editor.selectionBackground\": {},", self.editor_selection)?;
-        writeln!(f, "\"selection.background\": {},", self.ui_selection)?;
+        write_scope(f, "editor.selectionBackground", self.editor_selection)?;
+        write_scope(f, "selection.background", self.ui_selection)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
@@ -61,6 +61,11 @@ impl fmt::Display for Theme {
     }
 }
 
+fn write_scope(f: &mut fmt::Formatter<'_>, scope_name: &str, value: Rgb) -> fmt::Result {
+    writeln!(f, "\"{}\": {},", scope_name, value)
+}
+
+#[derive(Copy, Clone)]
 struct Rgb(u32);
 
 impl fmt::Display for Rgb {
