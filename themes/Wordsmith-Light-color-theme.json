@@ -17,6 +17,9 @@
 "editorCursor.foreground": "#16BDEC",
 "editor.selectionBackground": "#BFE8F4",
 "selection.background": "#B3D7FF",
+"textLink.foreground": "#16BDEC",
+"textLink.activeForeground": "#16BDEC",
+"editorLink.activeForeground": "#16BDEC",
 "rust_analyzer.inlayHints.foreground": "#C7C4C2",
 }
 }

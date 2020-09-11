@@ -64,6 +64,10 @@ impl fmt::Display for Theme {
         write_scope(f, "editor.selectionBackground", self.editor_selection)?;
         write_scope(f, "selection.background", self.ui_selection)?;
 
+        write_scope(f, "textLink.foreground", self.teal)?;
+        write_scope(f, "textLink.activeForeground", self.teal)?;
+        write_scope(f, "editorLink.activeForeground", self.teal)?;
+
         write_scope(f, "rust_analyzer.inlayHints.foreground", self.out_of_focus)?;
         writeln!(f, "}}")?;
 
