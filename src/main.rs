@@ -174,15 +174,36 @@ impl fmt::Display for Theme {
     }
 }
 
-fn write_scope(f: &mut fmt::Formatter<'_>, scope_name: &str, value: Rgb) -> fmt::Result {
-    writeln!(f, "\"{}\": {},", scope_name, value)
+fn write_scope(f: &mut fmt::Formatter<'_>, scope_name: &str, value: impl Into<Rgba>) -> fmt::Result {
+    writeln!(f, "\"{}\": {},", scope_name, value.into())
+}
+
+struct Rgba {
+    rgb: Rgb,
+    a: u8,
+}
+
+impl From<Rgb> for Rgba {
+    fn from(rgb: Rgb) -> Self {
+        Self { rgb, a: 0xFF }
+    }
+}
+
+impl From<(Rgb, u8)> for Rgba {
+    fn from((rgb, a): (Rgb, u8)) -> Self {
+        Self { rgb, a }
+    }
+}
+
+impl fmt::Display for Rgba {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        if self.a == 0xFF {
+            write!(f, "\"#{:06X}\"", self.rgb.0)
+        } else {
+            write!(f, "\"#{:06X}{:02X}\"", self.rgb.0, self.a)
+        }
+    }
 }
 
 #[derive(Copy, Clone)]
 struct Rgb(u32);
-
-impl fmt::Display for Rgb {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "\"#{:06X}\"", self.0)
-    }
-}
