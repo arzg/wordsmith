@@ -51,11 +51,7 @@ impl fmt::Display for Theme {
         writeln!(f, "\"editorCursor.background\": {},", self.cursor)?;
         writeln!(f, "\"editorCursor.foreground\": {},", self.cursor)?;
 
-        writeln!(
-            f,
-            "\"editor.selectionBackground\": {},",
-            self.editor_selection
-        )?;
+        writeln!(f, "\"editor.selectionBackground\": {},", self.editor_selection)?;
         writeln!(f, "\"selection.background\": {},", self.ui_selection)?;
         writeln!(f, "}}")?;
 
