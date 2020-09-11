@@ -17,6 +17,7 @@ const LIGHT: Theme = Theme {
     blue: Rgb(0x3476B9),
     green: Rgb(0x3F831E),
     out_of_focus: Rgb(0xC7C4C2),
+    less_out_of_focus: Rgb(0x999999),
     borders: Rgb(0xDBDBDB),
     editor_selection: Rgb(0xBFE8F4),
     ui_selection: Rgb(0xB3D7FF),
@@ -34,6 +35,7 @@ struct Theme {
     blue: Rgb,
     green: Rgb,
     out_of_focus: Rgb,
+    less_out_of_focus: Rgb,
     borders: Rgb,
     editor_selection: Rgb,
     ui_selection: Rgb,
@@ -60,6 +62,8 @@ impl Theme {
 
         write_scope(f, "sideBar.background", self.ui_background)?;
         write_scope(f, "sideBar.border", self.borders)?;
+        write_scope(f, "sideBarSectionHeader.foreground", self.less_out_of_focus)?;
+        write_scope(f, "sideBarSectionHeader.background", self.ui_background)?;
 
         write_scope(f, "activityBar.background", self.ui_background)?;
         write_scope(f, "activityBar.foreground", self.foreground)?;

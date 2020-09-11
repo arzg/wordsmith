@@ -11,6 +11,8 @@
 "tree.indentGuidesStroke": "#C7C4C2",
 "sideBar.background": "#FCFCFC",
 "sideBar.border": "#DBDBDB",
+"sideBarSectionHeader.foreground": "#999999",
+"sideBarSectionHeader.background": "#FCFCFC",
 "activityBar.background": "#FCFCFC",
 "activityBar.foreground": "#1A1A1A",
 "activityBar.inactiveForeground": "#C7C4C2",
