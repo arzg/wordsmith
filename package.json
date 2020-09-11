@@ -20,6 +20,12 @@
                 "id": "Wordsmith Light",
                 "uiTheme": "vs",
                 "path": "./themes/Wordsmith-Light-color-theme.json"
+            },
+            {
+                "label": "Wordsmith Dark",
+                "id": "Wordsmith Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Wordsmith-Dark-color-theme.json"
             }
         ]
     }

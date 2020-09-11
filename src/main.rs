@@ -2,8 +2,14 @@ use std::path::PathBuf;
 use std::{fmt, fs, io};
 
 fn main() -> io::Result<()> {
-    fs::write(LIGHT.path(), LIGHT.to_string())
+    for theme in THEMES {
+        fs::write(theme.path(), theme.to_string())?;
+    }
+
+    Ok(())
 }
+
+const THEMES: &[Theme] = &[LIGHT, DARK];
 
 const LIGHT: Theme = Theme {
     name: "Light",
@@ -22,6 +28,25 @@ const LIGHT: Theme = Theme {
     borders: Rgb(0xDBDBDB),
     editor_selection: Rgb(0xBFE8F4),
     ui_selection: Rgb(0xB3D7FF),
+};
+
+const DARK: Theme = Theme {
+    name: "Dark",
+    background: Rgb(0x1A1A1A),
+    ui_background: Rgb(0x141414),
+    ui_background_focused: Rgb(0x2B2B2B),
+    foreground: Rgb(0xCCCCCC),
+    teal: Rgb(0x16BDEC),
+    yellow: Rgb(0xC1944E),
+    red: Rgb(0xD98567),
+    purple: Rgb(0xBA8DB3),
+    blue: Rgb(0x7B9FC2),
+    green: Rgb(0x82A56F),
+    out_of_focus: Rgb(0x707070),
+    less_out_of_focus: Rgb(0x757575),
+    borders: Rgb(0x2E2E2E),
+    editor_selection: Rgb(0x19424E),
+    ui_selection: Rgb(0x3F638B),
 };
 
 struct Theme {
