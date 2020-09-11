@@ -10,6 +10,7 @@ const LIGHT: Theme = Theme {
     background: Rgb(0xF7F7F7),
     foreground: Rgb(0x1A1A1A),
     borders: Rgb(0xDBDBDB),
+    cursor: Rgb(0x16BDEC),
 };
 
 struct Theme {
@@ -17,6 +18,7 @@ struct Theme {
     background: Rgb,
     foreground: Rgb,
     borders: Rgb,
+    cursor: Rgb,
 }
 
 impl Theme {
@@ -41,6 +43,8 @@ impl fmt::Display for Theme {
         writeln!(f, "\"statusBar.debuggingBackground\": {},", self.background)?;
         writeln!(f, "\"statusBar.noFolderBackground\": {},", self.background)?;
         writeln!(f, "\"statusBar.border\": {},", self.borders)?;
+
+        writeln!(f, "\"editorCursor.foreground\": {},", self.cursor)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;
