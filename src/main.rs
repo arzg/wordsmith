@@ -11,6 +11,8 @@ const LIGHT: Theme = Theme {
     foreground: Rgb(0x1A1A1A),
     borders: Rgb(0xDBDBDB),
     cursor: Rgb(0x16BDEC),
+    editor_selection: Rgb(0xBFE8F4),
+    ui_selection: Rgb(0xB3D7FF),
 };
 
 struct Theme {
@@ -19,6 +21,8 @@ struct Theme {
     foreground: Rgb,
     borders: Rgb,
     cursor: Rgb,
+    editor_selection: Rgb,
+    ui_selection: Rgb,
 }
 
 impl Theme {
@@ -46,6 +50,13 @@ impl fmt::Display for Theme {
 
         writeln!(f, "\"editorCursor.background\": {},", self.cursor)?;
         writeln!(f, "\"editorCursor.foreground\": {},", self.cursor)?;
+
+        writeln!(
+            f,
+            "\"editor.selectionBackground\": {},",
+            self.editor_selection
+        )?;
+        writeln!(f, "\"selection.background\": {},", self.ui_selection)?;
         writeln!(f, "}}")?;
 
         writeln!(f, "}}")?;

@@ -11,5 +11,7 @@
 "statusBar.border": "#DBDBDB",
 "editorCursor.background": "#16BDEC",
 "editorCursor.foreground": "#16BDEC",
+"editor.selectionBackground": "#BFE8F4",
+"selection.background": "#B3D7FF",
 }
 }
