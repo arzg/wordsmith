@@ -9,6 +9,7 @@ const LIGHT: Theme = Theme {
     name: "Light",
     background: Rgb(0xF7F7F7),
     ui_background: Rgb(0xFCFCFC),
+    ui_background_focused: Rgb(0xF0F0F0),
     foreground: Rgb(0x1A1A1A),
     teal: Rgb(0x16BDEC),
     yellow: Rgb(0xA66501),
@@ -27,6 +28,7 @@ struct Theme {
     name: &'static str,
     background: Rgb,
     ui_background: Rgb,
+    ui_background_focused: Rgb,
     foreground: Rgb,
     teal: Rgb,
     yellow: Rgb,
@@ -76,6 +78,13 @@ impl Theme {
         write_scope(f, "statusBar.debuggingBackground", self.background)?;
         write_scope(f, "statusBar.noFolderBackground", self.background)?;
         write_scope(f, "statusBar.border", self.borders)?;
+
+        write_scope(f, "list.hoverBackground", self.ui_background)?;
+        write_scope(f, "list.focusBackground", self.ui_background_focused)?;
+        write_scope(f, "list.activeSelectionBackground", self.ui_background_focused)?;
+        write_scope(f, "list.activeSelectionForeground", self.foreground)?;
+        write_scope(f, "list.inactiveSelectionBackground", self.ui_background)?;
+        write_scope(f, "list.highlightForeground", self.teal)?;
 
         write_scope(f, "panel.background", self.ui_background)?;
         write_scope(f, "panel.border", self.borders)?;
