@@ -99,6 +99,24 @@ impl Theme {
         write_scope(f, "textLink.activeForeground", self.teal)?;
         write_scope(f, "editorLink.activeForeground", self.teal)?;
 
+        write_scope(f, "terminal.foreground", self.foreground)?;
+        write_scope(f, "terminal.ansiBlack", self.background)?;
+        write_scope(f, "terminal.ansiBrightBlack", self.out_of_focus)?;
+        write_scope(f, "terminal.ansiRed", self.red)?;
+        write_scope(f, "terminal.ansiBrightRed", self.red)?;
+        write_scope(f, "terminal.ansiGreen", self.green)?;
+        write_scope(f, "terminal.ansiBrightGreen", self.green)?;
+        write_scope(f, "terminal.ansiYellow", self.yellow)?;
+        write_scope(f, "terminal.ansiBrightYellow", self.yellow)?;
+        write_scope(f, "terminal.ansiBlue", self.blue)?;
+        write_scope(f, "terminal.ansiBrightBlue", self.blue)?;
+        write_scope(f, "terminal.ansiMagenta", self.purple)?;
+        write_scope(f, "terminal.ansiBrightMagenta", self.purple)?;
+        write_scope(f, "terminal.ansiCyan", self.teal)?;
+        write_scope(f, "terminal.ansiBrightCyan", self.teal)?;
+        write_scope(f, "terminal.ansiWhite", self.foreground)?;
+        write_scope(f, "terminal.ansiBrightWhite", self.foreground)?;
+
         write_scope(f, "rust_analyzer.inlayHints.foreground", self.out_of_focus)?;
 
         writeln!(f, "}},")?;
