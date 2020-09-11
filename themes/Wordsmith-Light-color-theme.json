@@ -43,4 +43,18 @@
 "editorLink.activeForeground": "#16BDEC",
 "rust_analyzer.inlayHints.foreground": "#C7C4C2",
 },
+"semanticHighlighting": true,
+"semanticTokenColors": {
+"type": "#A66501",
+"struct": "#A66501",
+"enum": "#A66501",
+"property": "#CB4819",
+"number": "#CB4819",
+"string": "#CB4819",
+"keyword": "#B24FA3",
+"function": "#3476B9",
+"interface": "#3F831E",
+"enumMember": "#3F831E",
+"comment": "#C7C4C2",
+},
 }

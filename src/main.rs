@@ -105,6 +105,28 @@ impl Theme {
 
         Ok(())
     }
+
+    fn semantic_colors(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        writeln!(f, "\"semanticHighlighting\": true,")?;
+        writeln!(f, "\"semanticTokenColors\": {{")?;
+
+        write_scope(f, "type", self.yellow)?;
+        write_scope(f, "struct", self.yellow)?;
+        write_scope(f, "enum", self.yellow)?;
+        write_scope(f, "property", self.red)?;
+        write_scope(f, "number", self.red)?;
+        write_scope(f, "string", self.red)?;
+        write_scope(f, "keyword", self.purple)?;
+        write_scope(f, "function", self.blue)?;
+        write_scope(f, "interface", self.green)?;
+        write_scope(f, "enumMember", self.green)?;
+
+        write_scope(f, "comment", self.out_of_focus)?;
+
+        writeln!(f, "}},")?;
+
+        Ok(())
+    }
 }
 
 impl fmt::Display for Theme {
@@ -113,6 +135,7 @@ impl fmt::Display for Theme {
 
         writeln!(f, "\"name\": \"Wordsmith {}\",", self.name)?;
         self.workbench_colors(f)?;
+        self.semantic_colors(f)?;
 
         writeln!(f, "}}")?;
 
