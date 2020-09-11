@@ -118,6 +118,7 @@
 "string": "#D98567",
 "keyword": "#BA8DB3",
 "function": "#7B9FC2",
+"macro": "#7B9FC2",
 "interface": "#82A56F",
 "enumMember": "#82A56F",
 "comment": "#707070",

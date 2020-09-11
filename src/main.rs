@@ -221,6 +221,7 @@ impl Theme {
         write_scope(f, "string", self.red)?;
         write_scope(f, "keyword", self.purple)?;
         write_scope(f, "function", self.blue)?;
+        write_scope(f, "macro", self.blue)?;
         write_scope(f, "interface", self.green)?;
         write_scope(f, "enumMember", self.green)?;
 
