@@ -28,6 +28,7 @@
 "editorGroupHeader.border": "#DBDBDB",
 "editorGroupHeader.noTabsBackground": "#FCFCFC",
 "editorGroupHeader.tabsBackground": "#F7F7F7",
+"editorGroup.border": "#DBDBDB",
 "editorWidget.background": "#FCFCFC",
 "editorWidget.border": "#DBDBDB",
 "editorCursor.background": "#16BDEC",

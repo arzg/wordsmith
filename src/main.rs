@@ -75,6 +75,7 @@ impl fmt::Display for Theme {
         write_scope(f, "editorGroupHeader.border", self.borders)?;
         write_scope(f, "editorGroupHeader.noTabsBackground", self.ui_background)?;
         write_scope(f, "editorGroupHeader.tabsBackground", self.background)?;
+        write_scope(f, "editorGroup.border", self.borders)?;
 
         write_scope(f, "editorWidget.background", self.ui_background)?;
         write_scope(f, "editorWidget.border", self.borders)?;
